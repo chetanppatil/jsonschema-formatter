@@ -1,0 +1,28 @@
+{
+  "name": "jsonschema-formatter",
+  "version": "1.0.0",
+  "description": "Convert and output jsonschema validation error in more readable format",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit --recursive --timeout 25000 --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chetan07j/jsonschema-formatter.git"
+  },
+  "keywords": [
+    "json",
+    "jsonschema",
+    "validtion",
+    "format",
+    "jsonschema",
+    "validation",
+    "formatter"
+  ],
+  "author": "Chetan Patil <chetan0779@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chetan07j/jsonschema-formatter/issues"
+  },
+  "homepage": "https://github.com/Chetan07j/jsonschema-formatter#readme"
+}
