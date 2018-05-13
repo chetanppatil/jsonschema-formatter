@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/Chetan07j/jsonschema-formatter/issues"
   },
-  "homepage": "https://github.com/Chetan07j/jsonschema-formatter#readme"
+  "homepage": "https://github.com/Chetan07j/jsonschema-formatter#readme",
+  "dependencies": {
+    "jsonschema": "^1.2.4",
+    "q": "^1.5.1"
+  },
+  "standard": {
+    "global": [ "q" ]
+  }
 }
