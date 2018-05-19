@@ -37,8 +37,8 @@ const validateSchema = require('jsonschema-formatter').validateSchema;
 ## Example Schema And Input Data
 
 ```javascript
-// schema
-var schema = {
+// Input Body Validation Schema
+let schema = {
   'id': '/SimplePerson',
   'type': 'object',
   'properties': {
@@ -61,8 +61,8 @@ var schema = {
   'required': ['name']
 }
 
-// input body
-var p = {
+// Input Body
+let p = {
   'names': 'Barack Obama',
   'address': {
     'lines': [ '1600 Pennsylvania Avenue Northwest' ],
@@ -73,14 +73,23 @@ var p = {
   'votes': 0
 }
 
+// Custom Defined Error Codes
+let resCode = {
+  REQUIRED_NAME: 'CUST_ERR0001',
+  TYPE_COUNTRY: 'CUST_ERR0002'
+}
+
 ```
 
 ## Call `validateSchema` Function
 
 ```javascript
-// here p and schema refers to above step
+/*
+  here p and schema refers to above step, resCode is optional if you define your custom error codes
+  then pass it else pre-defined error codes will be assigned
+*/
 
-validateSchema(p, schema)
+validateSchema(p, schema, resCode)
 .then((validationResult) => {
   console.log('RESULT: ', validationResult)
 })
@@ -93,7 +102,7 @@ validateSchema(p, schema)
 ## Output Of Above Vaidation
 
 ```javascript
-VALIDATION ERR: [ { code: 'ERR0002',
+VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
     error: 'country is not of a type(s) string',
     parameter: 'country',
     line: null },
@@ -106,6 +115,20 @@ VALIDATION ERR: [ { code: 'ERR0002',
     parameter: 'name',
     line: null } ]
 ```
+
+## Output Parameter Definition
+
+`code`: User Defined Or Pre-defined Error Code To Uniquely Find Specific Error
+`error`: Text Explaining What Error Occured
+`parameter`: Request Body Parameter(Key) For Which Error Occured
+`line`: In Case Of Array Which Index Element Has Error
+
+## How To Define Custom Error Codes
+
+| Error Codes   | Error Type | Example (from body used above) |
+| ------------- | ------------- |
+| `REQUIRED_<your-parameter-name-in-uppercase>`  | Required field error  | For missing name property ```javascript { REQUIRED_NAME: 'CUST_ERR001' } ``` |
+| `TYPE_<your-parameter-name-in-uppercase>`  | Field type error  | For country peoperty type error ```javascript { TYPE_COUNTRY: 'CUST_ERR002' } ``` |
 
 ## Changelog
 
