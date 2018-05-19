@@ -9,7 +9,7 @@ describe('FORMATTER TEST:', () => {
   })
   // it('Should throw error ("Invalid schema (schema should contain peroprty id).") if schema passed to function does not contain peroprty "id"', (done) => {
   //   let schema = { test: 'test' }
-  //   expect(validateSchema(null, schema)).to.throw('Invalid schema (schema should contain peroprty id).')
+  //   expect(validateSchema(null, schema)).to.throw('Invalid schema (schema should contain property id).')
   //   done()
   // })
   it('Should contain code, error, parameter, line properties in response if validation error', (done) => {
