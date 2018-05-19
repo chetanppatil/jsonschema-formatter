@@ -1,6 +1,6 @@
 {
   "name": "jsonschema-formatter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert and output jsonschema validation error in more readable format",
   "main": "index.js",
   "scripts": {
