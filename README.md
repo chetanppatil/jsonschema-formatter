@@ -133,7 +133,7 @@ VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
 | `MINITEMS_<your-parameter-name-in-uppercase>`  | Array minimum item check  | Empty array check |
 | `UNIQUEITEMS_<your-parameter-name-in-uppercase>`  | Array element duplication  | Duplicate item check |
 | `MINIMUM_<your-parameter-name-in-uppercase>`  | Field minimum value check  | For votes peoperty min value error ` { MINIMUM_VOTES: 'CUST_ERR003' } ` |
-| `ANYOF_<your-parameter-name-in-uppercase>`  | Either-or field check  | Any one of fields should be present } ` |
+| `ANYOF_<your-parameter-name-in-uppercase>`  | Either-or field check  | Any one of fields should be present |
 
 ## Changelog
 
