@@ -118,7 +118,7 @@ VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
 
 ## Output Parameter Definition
 
-- `code`: User Defined Or Pre-defined Error Code To Uniquely Find Specific Error
+- `code`: User Defined Or Pre-defined Error Code To Uniquely Identify Specific Error
 - `error`: Text Explaining What Error Occured
 - `parameter`: Request Body Parameter(Key) For Which Error Occured
 - `line`: In Case Of Array Which Index Element Has Error
@@ -127,8 +127,13 @@ VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
 
 | Error Codes   | Error Type | Example (from body used above) |
 | ------------- | ------------- | ------------- |
-| `REQUIRED_<your-parameter-name-in-uppercase>`  | Required field error  | For missing name property ```javascript { REQUIRED_NAME: 'CUST_ERR001' } ``` |
-| `TYPE_<your-parameter-name-in-uppercase>`  | Field type error  | For country peoperty type error ```javascript { TYPE_COUNTRY: 'CUST_ERR002' } ``` |
+| `REQUIRED_<your-parameter-name-in-uppercase>`  | Required field error  | For missing name property ` { REQUIRED_NAME: 'CUST_ERR001' } ` |
+| `TYPE_<your-parameter-name-in-uppercase>`  | Field type error  | For country peoperty type error ` { TYPE_COUNTRY: 'CUST_ERR002' } ` |
+| `FORMAT_<your-parameter-name-in-uppercase>`  | Field format error  | Email format error |
+| `MINITEMS_<your-parameter-name-in-uppercase>`  | Array minimum item check  | Empty array check |
+| `UNIQUEITEMS_<your-parameter-name-in-uppercase>`  | Array element duplication  | Duplicate item check |
+| `MINIMUM_<your-parameter-name-in-uppercase>`  | Field minimum value check  | For votes peoperty min value error ` { MINIMUM_VOTES: 'CUST_ERR003' } ` |
+| `ANYOF_<your-parameter-name-in-uppercase>`  | Either-or field check  | Any one of fields should be present } ` |
 
 ## Changelog
 
