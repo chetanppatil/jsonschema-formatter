@@ -63,7 +63,7 @@ let schema = {
 
 // Input Body
 let p = {
-  'names': 'Barack Obama',
+  'name': 'Barack Obama',
   'address': {
     'lines': [ '1600 Pennsylvania Avenue Northwest' ],
     'zip': 'DC 20500',
