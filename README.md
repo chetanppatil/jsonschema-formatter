@@ -102,7 +102,9 @@ validateSchema(p, schema, resCode)
 ## Output Of Above Vaidation
 
 ```javascript
-VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
+VALIDATION ERR: {
+  status: 'fail',
+  errors: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
     error: 'country is not of a type(s) string',
     parameter: 'country',
     line: null },
@@ -114,6 +116,7 @@ VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
     error: 'property name is missing',
     parameter: 'name',
     line: null } ]
+}
 ```
 
 ## Output Parameter Definition
@@ -137,4 +140,5 @@ VALIDATION ERR: [ { code: 'CUST_ERR0002', // CODE FROM resCode YOUR DEFINED
 
 ## Changelog
 
+- _1.0.2 Fuction output changes_
 - _1.0.0 Initial version_
