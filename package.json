@@ -4,7 +4,7 @@
   "description": "Convert and output jsonschema validation error in more readable format",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit --recursive --timeout 25000 --reporter spec"
+    "test": "mocha --recursive --timeout 25000 --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/Chetan07j/jsonschema-formatter#readme",
   "dependencies": {
-    "jsonschema": "^1.2.4",
-    "q": "^1.5.1"
+    "jsonschema": "^1.2.4"
   },
   "standard": {
     "global": [

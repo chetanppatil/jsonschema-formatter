@@ -140,5 +140,6 @@ VALIDATION ERR: {
 
 ## Changelog
 
+- _1.0.3 q lib removed and implemented new Promise()_
 - _1.0.2 Fuction output changes_
 - _1.0.0 Initial version_
